@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:fontFamily="cursive"
+        android:text="Most populares de NYT"
+        android:textAlignment="center"
+        android:textSize="36sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:orientation="vertical"></LinearLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:fontFamily="cursive"
+        android:text="CONECTAR"
+        android:textSize="24sp"
+        app:rippleColor="#F8F5F5" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:fontFamily="cursive"
+        android:text="LISTA 1"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:fontFamily="cursive"
+        android:text="LISTA 2"
+        android:textSize="24sp"
+        app:iconTint="#070707"
+        app:rippleColor="#FFFFFF" />
+
+</LinearLayout>
