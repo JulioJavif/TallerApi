@@ -22,7 +22,7 @@
         android:orientation="vertical"></LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnconectar"
         android:layout_width="match_parent"
         android:layout_height="66dp"
         android:fontFamily="cursive"
@@ -31,7 +31,7 @@
         app:rippleColor="#F8F5F5" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnlistado1"
         android:layout_width="match_parent"
         android:layout_height="66dp"
         android:fontFamily="cursive"
@@ -39,7 +39,7 @@
         android:textSize="24sp" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnlistado2"
         android:layout_width="match_parent"
         android:layout_height="66dp"
         android:fontFamily="cursive"
