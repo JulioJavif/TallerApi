@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TallerApi</string>
+    <string name="Lista_2_desc"><![CDATA[Lista 2--> contiene los artículos mas compartidos en facebook en los últimos 30 días]]></string>
+    <string name="Lista_1_desc"><![CDATA[Lista 1--> contienes los articulos mas leidos en la pagina web de NYT los ultimos 30 dias]]></string>
+    <string name="Estado_conexion">Estado de Conexión a la API</string>
 </resources>
