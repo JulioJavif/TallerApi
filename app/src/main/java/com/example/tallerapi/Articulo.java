@@ -1,6 +1,9 @@
 package com.example.tallerapi;
 
-public class Articulo {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Articulo implements Parcelable {
     private String url;
     private String fecha;
     private String seccion;
@@ -12,6 +15,13 @@ public class Articulo {
         this.seccion = seccion;
         this.titulo = titulo;
     }
+    protected Articulo(Parcel in) {
+        url= in.readString();
+        fecha = in.readString();
+        seccion = in.readString();
+        seccion = in.readString();
+    }
+
 
     public String getUrl() {
         return url;
@@ -28,4 +38,29 @@ public class Articulo {
     public String getTitulo() {
         return titulo;
     }
+    public static final Parcelable.Creator<Articulo> CREATOR = new Parcelable.Creator<Articulo>() {
+        @Override
+        public Articulo createFromParcel(Parcel in) {
+            return new Articulo(in);
+        }
+
+        @Override
+        public Articulo[] newArray(int size) {
+            return new Articulo[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(url);
+        dest.writeString(fecha);
+        dest.writeString(seccion);
+        dest.writeString(titulo);
+    }
+
 }
