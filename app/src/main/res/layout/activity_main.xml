@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txt"
         android:layout_width="match_parent"
         android:layout_height="79dp"
         android:fontFamily="cursive"
@@ -47,5 +47,11 @@
         android:textSize="24sp"
         app:iconTint="#070707"
         app:rippleColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/txtmostrar"
+        android:layout_width="match_parent"
+        android:layout_height="298dp"
+        android:text="TextView" />
 
 </LinearLayout>
