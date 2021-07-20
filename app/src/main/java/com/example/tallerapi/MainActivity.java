@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         lista1=findViewById(R.id.btnlistado1);
         lista2=findViewById(R.id.btnlistado2);
         texto=findViewById(R.id.txtmostrar);
-        texart=findViewById(R.id.txt);
+        texart=findViewById(R.id.numarticulos);
 
         conectar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i= new Intent(getApplicationContext(),ListadoArticulos.class);
                 i.putParcelableArrayListExtra("articulos",cs);
                 startActivity(i);
+                texto.setText("conexion");
             }
         });
 
@@ -101,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                  cs.add(art);
             }
             texto.setText(cadena);
-            texart.setText(String.valueOf(c));
+            texart.setText("Cantidad de articulos encontrados en la lista 1: "+ String.valueOf(c));
         }catch (JSONException e){
             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }

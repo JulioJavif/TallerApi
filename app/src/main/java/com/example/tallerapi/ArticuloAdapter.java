@@ -30,10 +30,10 @@ public class ArticuloAdapter  extends ArrayAdapter<Articulo> {
         TextView secion= (TextView)  convertView.findViewById(R.id.txtsecion);
         TextView url= (TextView)  convertView.findViewById(R.id.txturl);
 
-        titulo.setText(art.getTitulo());
-        fecha.setText(art.getFecha());
-        secion.setText(art.getSeccion());
-        url.setText(art.getUrl());
+        titulo.setText("Titulo: "+ art.getTitulo());
+        fecha.setText("Fecha publicacion: "+ art.getFecha());
+        secion.setText("Seccion: "+ art.getSeccion());
+        url.setText("Url: "+ art.getUrl());
 
         return convertView;
     }

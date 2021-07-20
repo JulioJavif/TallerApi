@@ -18,7 +18,7 @@ public class ListadoArticulos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_articulos);
         Intent i= getIntent();
-        art= i.getParcelableArrayListExtra("articulo");
+        art= i.getParcelableArrayListExtra("articulos");
         listado=findViewById(R.id.listarticulos);
         if (art!=null && art.size()>0){
             ArticuloAdapter adapter = new ArticuloAdapter(this, art);

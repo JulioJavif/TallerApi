@@ -19,7 +19,7 @@ public class Articulo implements Parcelable {
         url= in.readString();
         fecha = in.readString();
         seccion = in.readString();
-        seccion = in.readString();
+        titulo = in.readString();
     }
 
 
