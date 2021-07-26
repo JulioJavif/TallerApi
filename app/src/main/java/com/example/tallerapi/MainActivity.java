@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 requestDatosViewed();
                 requestDatosShared();
-                texto.setText("Conectado a la API");
+
             }
         });
         lista1.setOnClickListener(new View.OnClickListener() {
@@ -78,12 +78,13 @@ public class MainActivity extends AppCompatActivity {
                       public void onResponse(JSONObject response) {
                           //dato.setText(response.toString());
                           parserJson(response, cs);
-
+                          texto.setText("Conectado a la API");
+                          conectar.setEnabled(false);
                       }
                   }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(),"Error en la conexion 1", Toast.LENGTH_LONG).show();
+                        texto.setText("No se pudo conectar a la API 1, revise su conexión");
                     }
                 }){
              @Override
@@ -104,12 +105,15 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         parserJson(response, cs2);
+                        texto.setText("Conectado a la API");
+                        conectar.setEnabled(false);
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(),"Error en la conexion 2", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getApplicationContext(),"Error en la conexion 2", Toast.LENGTH_LONG).show();
+                        texto.setText("No se pudo conectar a la API 2, revise su conexión");
                     }
                 }){
             @Override
