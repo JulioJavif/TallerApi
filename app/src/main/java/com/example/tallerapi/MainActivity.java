@@ -72,14 +72,16 @@ public class MainActivity extends AppCompatActivity {
     }
     public void requestDatosViewed(){
         RequestQueue cola = Volley.newRequestQueue(this);
+        cola.getCache().clear();
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
                   new Response.Listener<JSONObject>() {
                       @Override
                       public void onResponse(JSONObject response) {
                           //dato.setText(response.toString());
                           parserJson(response, cs);
-                          texto.setText("Conectado a la API");
+                          texto.setText("Conectado a las API");
                           conectar.setEnabled(false);
+
                       }
                   }, new Response.ErrorListener() {
                     @Override
@@ -100,12 +102,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void requestDatosShared(){
         RequestQueue cola = Volley.newRequestQueue(this);
+        cola.getCache().clear();
         JsonObjectRequest jsonobject = new JsonObjectRequest(Request.Method.GET, url2, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         parserJson(response, cs2);
-                        texto.setText("Conectado a la API");
+                        texto.setText("Conectado a las API");
                         conectar.setEnabled(false);
                     }
                 },
@@ -124,6 +127,7 @@ public class MainActivity extends AppCompatActivity {
             }
         };
         cola.add(jsonobject);
+        cola.getCache().clear();
     }
 
    public void parserJson(JSONObject response, ArrayList<Articulo> aux) {
